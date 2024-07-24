@@ -1,3 +1,4 @@
+package com.universite;
 
 import java.util.Scanner;
 
@@ -46,7 +47,10 @@ public class Universite {
 		break;
 		case 3:Matiere.gestionMatieres();
 		break;
-		case 4:Moyenne.gestNotes();
+		case 4:
+			Classes.afficherListClasses();
+			Moyenne.gestNotes();
+
 		break;
 		case 5:	
 		default:menu();

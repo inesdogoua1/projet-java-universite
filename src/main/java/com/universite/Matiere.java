@@ -1,3 +1,5 @@
+package com.universite;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

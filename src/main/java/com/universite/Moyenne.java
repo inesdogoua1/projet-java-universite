@@ -1,3 +1,5 @@
+package com.universite;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -10,7 +12,7 @@ public class Moyenne {
 			
 	//methode gestion des notes
 	public static void gestNotes() {
-		Classes.listeClasses();
+
 		System.out.println("Selectonnez une classe:");
 		
 		Scanner clavier = new Scanner(System.in);
