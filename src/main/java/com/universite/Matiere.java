@@ -1,4 +1,4 @@
-package com.universite;
+package main.java.com.universite;
 
 import java.util.ArrayList;
 import java.util.Scanner;
