@@ -33,7 +33,7 @@ public class Etudiants {
 		 nouvelEtudiant.classe=clavier.next();
 		 
 		 listEtudiants.add(nouvelEtudiant);
-		 System.out.println(listEtudiants);
+		 afficherEtudiant();
 		 
 	 }
 	
@@ -63,6 +63,15 @@ public class Etudiants {
 		}
 	
 	
+		
+		public static void afficherEtudiant() {
+			//System.out.println(listEtudiants);
+			 for(Etudiants etudant:listEtudiants) {
+				 System.out.printf("|(%s %s) %s |, ",etudant.nom,etudant.prenom,etudant.matricule);
+			 };
+		}
+		
+		
 		
 	}
 

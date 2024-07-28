@@ -34,27 +34,27 @@ public class Universite {
 
 	//methode menu
 	public static void menu(){
-		System.out.println("1.Gestion des classes\n2.Gestion des etudiants\n3.Gestion des matieres\n4.Enregistrer des notes\n5.Generer les bulletins\n6.Quitter");
+		System.out.println("1.Gestion des classes\n2.Gestion des etudiants\n3.Gestion des matieres\n4.Enregistrer des notes\n5.Quitter");
 	System.out.println("Veuillez choisir une option: ");
 	
-	Scanner clavier = new Scanner(System.in);
-	int choix= clavier.nextInt();
+	try (Scanner clavier = new Scanner(System.in)) {
+		int choix= clavier.nextInt();
 
-	switch(choix) {
-		case 1:Classes.gestionClasse();
-		break;
-		case 2:Etudiants.gestionEtudiants();
-		break;
-		case 3:Matiere.gestionMatieres();
-		break;
-		case 4:Notes.ajouterNotes();
-		break;
-		case 5:	
-		break;
-		case 6:
+		switch(choix) {
+			case 1:Classes.gestionClasse();
+			break;
+			case 2:Etudiants.gestionEtudiants();
+			break;
+			case 3:Matiere.gestionMatieres();
+			break;
+			case 4:Notes.ajouterNotes();
+			break;
+			case 5:	
 			System.out.println("Merci pour votre visite!!!");
-		default:menu();
+			return ;
+			default:menu();
 
+		}
 	}
 	
 	}

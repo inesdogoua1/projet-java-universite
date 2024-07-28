@@ -14,26 +14,26 @@ public class Matiere {
 							
 				
 				System.out.println("1.Ajouter une matiere");
-				Scanner clavier = new Scanner(System.in);
-				int choix= clavier.nextInt();
-				
-				if(choix==1) {
-					int stop=0;
+				try (Scanner clavier = new Scanner(System.in)) {
+					int choix= clavier.nextInt();
 					
-					do {
-						System.out.println("Veuillez entrer le nom de la matiere que vous souhaitez ajouter:") ;
-						String nomDeMatiere=clavier.next();
+					if(choix==1) {
+						int stop=0;
 						
-						listMatieres.add(nomDeMatiere);
-						System.out.println(listMatieres);
-						
-						System.out.println("Appuyez 1 pour arreter et 0 pour continuer");
-						 stop = clavier.nextInt();
-					}while(stop==0);
-				}else {
-					System.out.println("Choix indisponible.");
+						do {
+							System.out.println("Veuillez entrer le nom de la matiere que vous souhaitez ajouter:") ;
+							String nomDeMatiere=clavier.next();
+							
+							listMatieres.add(nomDeMatiere);
+							System.out.println(listMatieres);
+							
+							System.out.println("Appuyez 1 pour arreter et 0 pour continuer");
+							 stop = clavier.nextInt();
+						}while(stop==0);
+					}else {
+						System.out.println("Choix indisponible.");
+					}
 				}
-				
 				Classes.revenirAuMenu();
 				
 								

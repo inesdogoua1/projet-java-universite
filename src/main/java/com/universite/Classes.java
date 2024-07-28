@@ -57,13 +57,10 @@ public class Classes {
 		
 		//revenir au menu principal
 		public static void revenirAuMenu() {
-			
+			Scanner clavier = new Scanner(System.in);
 			System.out.println("1.Revenir au menu principal\n2.Quitter");
 			
-			Scanner clavier = new Scanner(System.in);
 			int choix= clavier.nextInt();
-			
-			
 			
 			if(choix==1) {
 				Universite.menu();
