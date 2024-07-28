@@ -33,7 +33,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.universite.Universite</mainClass>
+                            <mainClass>main.java.com.universite.Universite</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -87,7 +87,7 @@ public class Notes {
         double moyenne = calculerMoyenne(listeNotes);
 
         System.out.println("Moyenne des notes : " + moyenne);
-      
+     
        
     }
 }

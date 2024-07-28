@@ -1,5 +1,11 @@
 UNIVERSITE PAUL MARIE
 
+Développer une application Java pour gérer les notes des étudiants dans une
+école.
+L'application doit permettre l'administration des classes, des étudiants et des
+matières, ainsi que l'enregistrement des notes, le calcul des moyennes,
+l'établissement des classements et la génération des bulletins de notes.
+
 1.AUTHENTIFICATION
 identifiant: 12369874
 mot de pass: 1234
@@ -10,8 +16,7 @@ mot de pass: 1234
     2. Gestion des Etudiants   
     3. Gestion des Matieres    
     4. Enregistrer des notes 
-    5. Generer les Bulletins   
-    6. Quitter     
+    5. Quitter     
 
 1. Gestion des classes
 	- Ajouter des classes et les afficher
@@ -23,13 +28,10 @@ mot de pass: 1234
 	- Ajouter des matieres et les afficher
 
 4. enregistrer des notes 
-	- afficher les notes par etudiants dans une classe
-	- Calculer des moyennes
-	- Faire des classements
-5. Gestion des Bulletins 
-	- Imprimer les bulletins
-
-6.Quitter
+	- enregistrer les notes d'un etudiant par matiere a partir de son matricule
+	- Calculer les  moyennes par matiere
+	
+5. Quitter
 	- Fermer l'application     
 
 
