@@ -26,7 +26,7 @@ public class Classes {
 		//methode gestion des classes
 		public static void gestionClasse() {
 			System.out.println("1.Ajouter une nouvelle classe");
-			try (Scanner clavier = new Scanner(System.in)) {
+			Scanner clavier = new Scanner(System.in);
 				int choix= clavier.nextInt();
 				
 				if(choix==1) {
@@ -45,7 +45,7 @@ public class Classes {
 				}else {
 					System.out.println("Choix indisponible.");
 				}
-			}
+			
 			revenirAuMenu();
 				
 			
@@ -57,7 +57,7 @@ public class Classes {
 		
 		//revenir au menu principal
 		public static void revenirAuMenu() {
-			try (Scanner clavier = new Scanner(System.in)) {
+			Scanner clavier = new Scanner(System.in);
 				System.out.println("1.Revenir au menu principal\n2.Quitter");
 				
 				int choix= clavier.nextInt();
@@ -70,6 +70,6 @@ public class Classes {
 					System.out.println("Merci pour votre visite!!!");
 					return ;
 				}
-			}
+			
 		}
 }
