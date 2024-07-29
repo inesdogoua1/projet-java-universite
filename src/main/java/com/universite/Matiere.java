@@ -14,7 +14,7 @@ public class Matiere {
 							
 				
 				System.out.println("1.Ajouter une matiere");
-				try (Scanner clavier = new Scanner(System.in)) {
+				Scanner clavier = new Scanner(System.in);
 					int choix= clavier.nextInt();
 					
 					if(choix==1) {
@@ -26,16 +26,24 @@ public class Matiere {
 							
 							listMatieres.add(nomDeMatiere);
 							System.out.println(listMatieres);
-							
+							// revenir au menu
 							System.out.println("Appuyez 1 pour arreter et 0 pour continuer");
-							 stop = clavier.nextInt();
+							stop = clavier.nextInt();
+							if(stop==1) {
+								Universite.menu();
+							}
+							
+							
+							 
+							
 						}while(stop==0);
 					}else {
 						System.out.println("Choix indisponible.");
 					}
-				}
-				Classes.revenirAuMenu();
 				
+				
+				
+							
 								
 			}
 
@@ -43,17 +51,12 @@ public class Matiere {
 		public static void listMatieres() {
 			
 			
-			/*listMatieres.add("Mathematiques");
-			listMatieres.add("Français");
-			listMatieres.add("Anglais");*/
+			
 			listMatieres.add("Algorithme");
 			listMatieres.add("HTML");
 			listMatieres.add("CSS");
 			listMatieres.add("JavaScript");
-			/*listMatieres.add("langage C");
-			listMatieres.add("Java");
-			listMatieres.add("Php");
-			listMatieres.add("Bases de donnees");*/
+		
 						
 					//System.out.println(listMatieres);
 					}	

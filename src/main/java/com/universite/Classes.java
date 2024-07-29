@@ -26,26 +26,26 @@ public class Classes {
 		//methode gestion des classes
 		public static void gestionClasse() {
 			System.out.println("1.Ajouter une nouvelle classe");
-			Scanner clavier = new Scanner(System.in);
-			int choix= clavier.nextInt();
-			
-			if(choix==1) {
-				int stop=0;
+			try (Scanner clavier = new Scanner(System.in)) {
+				int choix= clavier.nextInt();
 				
-				do {
-					System.out.print("Veuillez renseigner le nom de la classe que vous voulez ajouter:");
-					String nomDeClasse=clavier.next();
+				if(choix==1) {
+					int stop=0;
 					
-					listClasses.add(nomDeClasse);
-					System.out.println(listClasses);
-					
-					System.out.println("Appuyez 1 pour arreter et 0 pour continuer");
-					 stop = clavier.nextInt();
-				}while(stop==0);
-			}else {
-				System.out.println("Choix indisponible.");
+					do {
+						System.out.print("Veuillez renseigner le nom de la classe que vous voulez ajouter:");
+						String nomDeClasse=clavier.next();
+						
+						listClasses.add(nomDeClasse);
+						System.out.println(listClasses);
+						
+						System.out.println("Appuyez 1 pour arreter et 0 pour continuer");
+						 stop = clavier.nextInt();
+					}while(stop==0);
+				}else {
+					System.out.println("Choix indisponible.");
+				}
 			}
-			
 			revenirAuMenu();
 				
 			
@@ -57,18 +57,19 @@ public class Classes {
 		
 		//revenir au menu principal
 		public static void revenirAuMenu() {
-			Scanner clavier = new Scanner(System.in);
-			System.out.println("1.Revenir au menu principal\n2.Quitter");
-			
-			int choix= clavier.nextInt();
-			
-			if(choix==1) {
-				Universite.menu();
+			try (Scanner clavier = new Scanner(System.in)) {
+				System.out.println("1.Revenir au menu principal\n2.Quitter");
 				
-			}
-			else { 
-				System.out.println("Merci pour votre visite!!!");
-				return ;
+				int choix= clavier.nextInt();
+				
+				if(choix==1) {
+					Universite.menu();
+					
+				}
+				else { 
+					System.out.println("Merci pour votre visite!!!");
+					return ;
+				}
 			}
 		}
 }

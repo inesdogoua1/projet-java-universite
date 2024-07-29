@@ -46,7 +46,9 @@ public class Notes {
 
     // Méthode pour ajouter les notes
     public static void ajouterNotes() {
-        try (Scanner clavier = new Scanner(System.in)) {
+        Scanner clavier = new Scanner(System.in);
+        	
+        	
 			System.out.print("Entrez matricule: ");
 			String matricule = clavier.next();
 			if (!verifierMatricule1(matricule)) {
@@ -77,20 +79,41 @@ public class Notes {
 			        findeNote = true;
 			    }
 			}
-		} catch (NumberFormatException e) {
-			
-			e.printStackTrace();
-		}
 
+
+			
+			
         System.out.println("Liste des notes saisies : " + listeNotes);
 
         double moyenne = calculerMoyenne(listeNotes);
 
         System.out.println("Moyenne des notes : " + moyenne);
-     
-       
+        
+        
+     // pour revenir au menu principal ou quitter
+            System.out.println("1: Revenir au menu principal\n2. Quitter");
+            String choix = clavier.next();
+            
+            if (choix.equals("1")) {
+            	
+                Universite.menu();
+            } else if (choix.equals("2")) {
+            	
+                System.out.println("Au revoir!");
+            } else {
+            	
+                System.out.println("Choix invalide. ");
+            }
+        
     }
-}
+
+            
+    }
+    
+
+    	
+    
+
 
 	
 				
